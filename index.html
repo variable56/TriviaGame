@@ -6,12 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pirate Trivia</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+        <nav class="navbar navbar-light bg-light">
+                <a id="headerText" class="navbar-brand" href="#">
+                  <img src="./assets/images/pirate nav.png" width="60" height="60" class="d-inline-block" alt="">
+                  Pirate Trivia
+                </a>
+                <div id="timer">Time Remaining: 10</div>
+              </nav>
     <div id="startScreen" class="container">
-        <h1>Pirate Trivia</h1>
-        <h3 id="beginText">Press the button to begin</h3>
+        <h1 class="text-white">Pirate Trivia</h1>
+        <h3 id="beginText" class="text-white">Press the button to begin</h3>
         <button id="startButton">Click Me!</button>
     </div>
     <div class="container bg-light">

@@ -23,7 +23,12 @@ $(document).ready(function() {
         $("#beginText").html("");
         $("#startButton").hide();
         $("#question").html(questionBank.question1.question);
-        
+
+        for (i = 0; i <= questionBank.question1.options.length; i++) {
+        $("#answer").append("<br>")
+        $("#answer").append(questionBank.question1.options[i]);
+        }
+
     
 });
 //Display a countdown timer on screen that shows the player how much time they have to answer the question

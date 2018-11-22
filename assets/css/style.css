@@ -1,0 +1,11 @@
+body {
+    background-image: url(../images/Pirate-Map-Images-08028.jpg);
+}
+
+.navbar-brand {
+    background-color: 0, 0, 0, .6;
+}
+
+#headerText {
+    font-size: 20px;
+}
