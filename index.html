@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-        <nav class="navbar navbar-light bg-light">
-                <a id="headerText" class="navbar-brand" href="#">
-                  <img src="./assets/images/pirate nav.png" width="60" height="60" class="d-inline-block" alt="">
-                  Pirate Trivia
+        <nav  class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                  <img src="./assets/images/pirate nav.png" width="60" height="75" class="" alt="">
+                  <h3>Pirate Trivia</h3>
                 </a>
-                <div id="timer">Time Remaining: 10</div>
+                <div><h3 id="timer"></h3></div>
+                <div><h4 id="correct">correct: 0</h4></div>
+                <div><h4 id="incorrect">incorrect: 0</h4></div>
+                <div><h4 id="missed">missed: 0</h4></div>
               </nav>
     <div id="startScreen" class="container">
         <h1 class="text-white">Pirate Trivia</h1>
@@ -24,10 +27,16 @@
     <div class="container bg-light">
         <div class="row">
             <div id="question" class="col-md-12">
+                
             </div>
         </div>
         <div class="row">
-            <div id="answer" class="col-md-12">
+            <div id="answerContainer" class="col-md-12 container">
+                <label class="answer radioButton"><input type="radio" name="answer" value="1"/><span id="opt1"></span></label>
+                <label class="answer radioButton"><input type="radio" name="answer" value="2"/><span id="opt2"></span></label>
+                <label class="answer radioButton"><input type="radio" name="answer" value="3"/><span id="opt3"></span></label>
+                <label class="answer radioButton"><input type="radio" name="answer" value="4"/><span id="opt4"></span></label>
+                <button id="nextButton">Next question</button>
             </div>
         </div>
     
