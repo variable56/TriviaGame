@@ -82,20 +82,15 @@ $("#nextButton").on("click", function() {
         alert("correct!");
     }
 
-    if (currentQuestion == questionBank.length) {
-        resetTimer();
-        $("#questionContainer").hide();
-        $("#answerContainer").hide();
-        $("#result").show();
-        $("#result").html("<h3> Final Score " + correct + "out of " + questionBank.length + "!</h3>")
 
-    }
 
     else {
         incorrect++;
         $("#incorrect").html("Incorrect: " + incorrect);
         alert("better luck next time.")
     }
+
+    
 
     currentQuestion++;
     resetTimer();
@@ -141,6 +136,15 @@ function resetTimer() {
     clearInterval(Interval);
     timer = 11;
 }
+
+    if (currentQuestion == questionBank.length) {
+        resetTimer();
+        $("#questionContainer").hide();
+        $("#answerContainer").hide();
+        $("#result").show();
+        $("#result").html("<h3> Final Score " + correct + "out of " + totalQuestions + "!</h3>");
+
+    }
 
 }); 
 
