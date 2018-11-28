@@ -1,59 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pirate Trivia</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-        <nav  class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                  <img src="./assets/images/pirate nav.png" width="60" height="75" class="" alt="">
-                  <h3>Pirate Trivia</h3>
-                </a>
-                <div><h3 id="timer"></h3></div>
-                <div><h4 id="correct">correct: 0</h4></div>
-                <div><h4 id="incorrect">incorrect: 0</h4></div>
-                <div><h4 id="missed">missed: 0</h4></div>
-              </nav>
-    <div id="startScreen" class="container">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/images/pirate nav.png" width="60" height="75" class="" alt="">
+            <h3>Pirate Trivia</h3>
+        </a>
+        <div>
+            <h3 id="timer"></h3>
+        </div>
+        <div>
+            <h4 id="correct">correct: 0</h4>
+        </div>
+        <div>
+            <h4 id="incorrect">incorrect: 0</h4>
+        </div>
+        <div>
+            <h4 id="missed">missed: 0</h4>
+        </div>
+    </nav>
+    <br>
+    <div class="jumbotron container" id="startScreen">
+        <h1 class="display-3">Pirate Trivia</h1>
+        <p class="lead">A ten question quiz of your pirate knowledge.</p>
+        <hr class="my-2">
+        <p id=beginText>Think quick! You have 10 seconds to answer each question. Click the button to begin.</p>
+        <p class="lead">
+            <button class="btn btn-success btn-lg" id="startButton">Start</button>
+        </p>
+        <div class="container" id="questionContainer">
+            <div class="row">
+                <div id="question" class="col-md-12">
+
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div id="answerContainer" class="col-md-12 container">
+                    <label class="answer radioButton"><input type="radio" name="answer" value="1" /><span id="opt1"></span></label>
+                    <label class="answer radioButton"><input type="radio" name="answer" value="2" /><span id="opt2"></span></label>
+                    <label class="answer radioButton"><input type="radio" name="answer" value="3" /><span id="opt3"></span></label>
+                    <label class="answer radioButton"><input type="radio" name="answer" value="4" /><span id="opt4"></span></label>
+                    <button id="nextButton">Next question</button>
+                </div> -->
+                <!-- <div class="btn-group" id="answerContainer">
+                    <div class="btn-group-prepend"> -->
+                      <div class="btn-group-vertical" id="answerContainer"> 
+                        <label><input type="radio" name="answer" value="1"/><span id="opt1"></span></label>
+                        <label><input type="radio" name="answer" value="2"/><span id="opt2"></span></label>
+                        <label><input type="radio" name="answer" value="3"/><span id="opt3"></span></label>
+                        <label><input type="radio" name="answer" value="4"/><span id="opt4"></span></label>
+                      </div>
+                      <p class="lead">
+                        <button class="btn btn-success btn-lg" id="nextButton">Next question</button>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- <div id="startScreen" class="container">
         <h1 class="text-white">Pirate Trivia</h1>
         <h3 id="beginText" class="text-white">Press the button to begin</h3>
         <button id="startButton">Click Me!</button>
-    </div>
-    <div class="container bg-light" id="questionContainer">
-        <div class="row">
-            <div id="question" class="col-md-12">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div id="answerContainer" class="col-md-12 container">
-                <label class="answer radioButton"><input type="radio" name="answer" value="1"/><span id="opt1"></span></label>
-                <label class="answer radioButton"><input type="radio" name="answer" value="2"/><span id="opt2"></span></label>
-                <label class="answer radioButton"><input type="radio" name="answer" value="3"/><span id="opt3"></span></label>
-                <label class="answer radioButton"><input type="radio" name="answer" value="4"/><span id="opt4"></span></label>
-                <button id="nextButton">Next question</button>
-            </div>
-        </div>
-        
-    </div>
+    </div> -->
+        <!-- <div class="container bg-light" id="questionContainer">
+            <div class="row">
+                <div id="question" class="col-md-12">
 
-    <div class="container bg-dark" id="result">
+                </div>
+            </div>
+            <div class="row">
+                <div id="answerContainer" class="col-md-12 container">
+                    <label class="answer radioButton"><input type="radio" name="answer" value="1" /><span id="opt1"></span></label>
+                    <label class="answer radioButton"><input type="radio" name="answer" value="2" /><span id="opt2"></span></label>
+                    <label class="answer radioButton"><input type="radio" name="answer" value="3" /><span id="opt3"></span></label>
+                    <label class="answer radioButton"><input type="radio" name="answer" value="4" /><span id="opt4"></span></label>
+                    <button id="nextButton">Next question</button>
+                </div>
+            </div>
+
+        </div> -->
+
+        <div class="container bg-dark" id="result">
             <h3 class="text-light" id="finalScore"></h3>
             <button id="reset" type="button" class="btn btn-success">Restart Quiz</button>
         </div>
 
-    
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.js"
-    integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
-    crossorigin="anonymous"></script>
-    
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+            crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
+
 </html>
