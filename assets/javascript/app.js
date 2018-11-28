@@ -152,6 +152,9 @@ $("#nextButton").on("click", function() {
 //Load next question after an answer, or the timer runs out.
 
 function loadNext(questionIndex) {
+    $('input[type=radio]').prop('checked', function () {
+        return this.getAttribute('checked') == 'checked';
+    });
     timerCountdown();
     q = questionBank[questionIndex];
     $("#question").text((questionIndex + 1) + ". " + q.question);
@@ -161,11 +164,11 @@ function loadNext(questionIndex) {
     $("#opt4").text(" " + q.option4);
 
     if (currentQuestion == 10) {
+        $("#result").show();
         $("#questionContainer").hide();
         $("#timer").hide();
         resetTimer();
         $("#finalScore").html("Quiz complete! You scored " + correct + " out of " + (totalQuestions -1));
-        $("#result").show();
         return;
     }
 }
@@ -197,11 +200,27 @@ function resetTimer() {
     timer = 11;
 }
 
+//Click event to reset the game after the quiz is over
+$("#reset").on("click", function() {
+    correct = 0;
+    incorrect = 0;
+    missed = 0;
+    timer = 10;
+    currentQuestion = 0;
+    $("#timer").show();
+    $("#result").hide();
+    $("#questionContainer").show();
+    $("#correct").html("Correct: " + correct);
+    $("#missed").text("Missed: " + missed);
+    $("#incorrect").html("Incorrect: " + incorrect);
+    $("#timer").html("<h3>Time Remaining: " + timer + "</h3>");
+
+        $(".radioButton").show();
+        $("#nextButton").show();
+        $("#startButton").hide();
+        timerCountdown();
+        startingQuestion(currentQuestion);
+})
 
 }); 
 
-
-//CODE PROBLEMS
-//getting radio buttons to clear after each question
-//getting game to stop timer after answering all questions
-//Trigger end of game and display results when all questions have been answered or missed
