@@ -15,6 +15,11 @@ body {
 
 .navbar {
     border-bottom: solid 5px goldenrod;
+    background: lightgrey;
 }
 
-
+.footer {
+    background: rgb(0, 0, 56);
+    border-top: solid 3px goldenrod;
+    font-size: 5px;
+}
