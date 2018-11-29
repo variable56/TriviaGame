@@ -4,8 +4,8 @@
 
 const questionBank = [
     { question: "Which famous pirate put hemp in his beard and lit it on fire as an intimidation tactic?", 
-      option1: "black beard", 
-      option2: "jack sparrow",
+      option1: "Black Beard", 
+      option2: "Jack Sparrow",
       option3: "Barbossa",
       option4: "Napoleon", 
       answer: 1,
@@ -182,7 +182,7 @@ function loadNext(questionIndex) {
 
 function countdown() {
     timer--;
-    $("#timer").html("<h3>Time Remaining: " + timer + "</h3>");
+    $("#timer").html("<h4>Time Remaining: " + timer + "</h4>");
     if (timer === 0) {
         //If they run out of time an alert will display and they will add 1 to the missed variable
         resetTimer();

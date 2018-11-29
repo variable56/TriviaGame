@@ -1,11 +1,20 @@
 body {
-    background-image: url(../images/Pirate-Map-Images-08028.jpg);
+    background-image: url(../images/11428.jpg);
+    background-size: cover;
+    font-family: 'Pirata One', cursive;
 }
 
-.navbar-brand {
-    background-color: 0, 0, 0, .6;
+.jumbotron {
+   background: rgb(200, 200, 200); /* This is for ie8 and below */
+   background: rgba(200, 200, 200, 0.90); 
 }
 
 #headerText {
     font-size: 20px;
 }
+
+.navbar {
+    border-bottom: solid 5px goldenrod;
+}
+
+
