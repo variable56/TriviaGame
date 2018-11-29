@@ -94,14 +94,14 @@ let Interval;
 $(document).ready(function() {
 
     
-    $(".radioButton").hide();
+    $("#answerContainer").hide();
     $("#nextButton").hide();
     $("#result").hide();
     
     //Click event that will trigger the 1st question selection and then start a timer.
     $("#startButton").on( "click", function() {
         
-        $(".radioButton").show();
+        $("#answerContainer").show();
         $("#nextButton").show();
         $("#beginText").html("");
         $("#startButton").hide();
@@ -163,9 +163,14 @@ function loadNext(questionIndex) {
     $("#opt3").text(" " + q.option3);
     $("#opt4").text(" " + q.option4);
 
+    if (currentQuestion == 9) {
+        $("#nextButton").html("Finish");
+        return;
+    }
+
     if (currentQuestion == 10) {
         $("#result").show();
-        $("#questionContainer").hide();
+        $("#startScreen").hide();
         $("#timer").hide();
         resetTimer();
         $("#finalScore").html("Quiz complete! You scored " + correct + " out of " + (totalQuestions -1));
@@ -209,7 +214,7 @@ $("#reset").on("click", function() {
     currentQuestion = 0;
     $("#timer").show();
     $("#result").hide();
-    $("#questionContainer").show();
+    $("#startScreen").show();
     $("#correct").html("Correct: " + correct);
     $("#missed").text("Missed: " + missed);
     $("#incorrect").html("Incorrect: " + incorrect);
