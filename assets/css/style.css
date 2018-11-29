@@ -15,11 +15,18 @@ body {
 
 .navbar {
     border-bottom: solid 5px goldenrod;
-    background: lightgrey;
+    background: rgba(200, 200, 200, 0.95);
+    position: sticky; 
+
 }
 
 .footer {
     background: rgb(0, 0, 56);
     border-top: solid 3px goldenrod;
     font-size: 5px;
+}
+
+#questionContainer {
+    font-size: 24px;
+
 }
