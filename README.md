@@ -9,5 +9,5 @@ Begin by simply typing the letters to begin guessing the word. As you do, the re
 
 ## Deployment
 
-
+site is published at https://variable56.github.io/TriviaGame/
 
